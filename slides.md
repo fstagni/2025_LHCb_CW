@@ -36,10 +36,6 @@ title: why
 - Connecting few dots
 - Making the community aware of the daily computing operations
 
-<AdmonitionType type='info' >
-With "computing" here we mean "offline" computing. This presentation explains the roles and the operations done "daily" for supporting the computing model.
-</AdmonitionType>
-
 ---
 layout: top-title-two-cols
 color: gray-light
@@ -69,8 +65,6 @@ flowchart TB
 
 The coordination between the projects is done by the [LHCb Software and computing board](https://lhcb-scb.docs.cern.ch/)
 
-Within this presentation we are addressing **Computing** operations. 
-
 ```mermaid
 flowchart TB
     subgraph ide2 [Computing]
@@ -78,6 +72,43 @@ flowchart TB
     CS[Core Software]
     end
 ```
+
+<AdmonitionType type='info' >
+With "computing" here we mean "offline" computing. This presentation explains the roles and the operations done "daily" for supporting the computing model.
+</AdmonitionType>
+
+---
+layout: section
+color: blue
+title: CoreSW
+---
+
+# Core Software
+
+---
+layout: top-title
+color: gray-light
+align: cm
+title: CSRoles
+---
+
+:: title ::
+
+# Core Software: only fixed roles... for few people!
+
+:: content ::
+
+- **Maintenance and development** of
+    - Gaudi (*Marco Clemencic*)
+    - CI and Nightly Builds (*Marco Clemencic*)
+    - user and developer environments, e.g. `lb-run` and `lb-dev` (*Marco Clemencic*, *Ben Couturier*)
+- **Librarian** (*Ben Couturier*, *Marco Clemencic*)
+    - software packaging and deployment
+- **Liaison with SFT, ROOT, etc.** (*Ben Couturier*, *Marco Clemencic*)
+- **LHCb frameworks support**
+    - DD4hep (*Ben Couturier*, *Sebastien Ponce*)
+    - adaptation to latest versions of Gaudi, ROOT etc. (*Marco Clemencic*, *Sebastien Ponce*)
+
 
 ---
 layout: section
@@ -177,7 +208,7 @@ title: DCRoles
     - *Henryk Giemza*
     - *Mark Slater*
 - **DQCS shifters** -- 7 days shifts
-  - currently xx people registered as DQCS shifters
+  - currently about 60 people registered as DQCS shifters
   - refer to the Grid Expert for support
 
 
@@ -254,7 +285,7 @@ title: Issues
 
 :: content ::
 
-- **DQCS**: in 2024 40% of the shifts were covered by 4 people
+- **DQCS**: in 2024 30% of the shifts were covered by 4 people
 - **DQCS**: in this beginning of 2025 we kept asking for last minute volunteers
 - Our **Production Manager(s)** are one and only
   - We are slowly putting more and more automation
@@ -284,6 +315,42 @@ title: Communications
 layout: top-title
 color: gray-light
 align: cm
+title: GridUsagePlots
+---
+
+:: title ::
+
+# Grid Usage 
+
+:: content ::
+
+- More than 90% of CPU time is taken by MonteCarlo jobs
+  - then, and now
+
+![alt text](/public/images/running3_annotated.png)
+
+---
+layout: top-title
+color: gray-light
+align: cm
+title: GridUsagePlotsSprucing
+---
+
+:: title ::
+
+# Grid Usage / real data processing 
+
+:: content ::
+
+- Most of our operational time is dedicated to real data management
+- Run3 represents a big step forward also for our distributed computing resources usage
+
+![alt text](/public/images/running3_annotated_sprucing.png)
+
+---
+layout: top-title
+color: gray-light
+align: cm
 title: GridUsage
 ---
 
@@ -298,42 +365,8 @@ title: GridUsage
 - All our disk and tape resources are pledged
   - But we are getting a "present" from Online
 - In 2024 we faced a "disk crisis" that is making us thinking of changing the computing model
-- More than 90% of CPU time is taken by MonteCarlo jobs
 - 100% of the computing slots in use are `amd64`. We do have access to `arm64` slots but are unused. 
 - Almost all the jobs submitted are single-core jobs. For the other WLCG experiments, it is the contrary.
-
-
----
-layout: section
-color: blue
-title: CoreSW
----
-
-# Core Software
-
----
-layout: top-title
-color: gray-light
-align: cm
-title: CSRoles
----
-
-:: title ::
-
-# Core Software: only fixed roles... for few people!
-
-:: content ::
-
-- **Maintenance and development** of
-    - Gaudi (*Marco Clemencic*)
-    - CI and Nightly Builds (*Marco Clemencic*)
-    - user and developer environments, e.g. `lb-run` and `lb-dev` (*Marco Clemencic*, *Ben Couturier*)
-- **Librarian** (*Ben Couturier*, *Marco Clemencic*)
-    - software packaging and deployment
-- **Liaison with SFT, ROOT, etc.** (*Ben Couturier*, *Marco Clemencic*)
-- **LHCb frameworks support**
-    - DD4hep (*Ben Couturier*, *Sebastien Ponce*)
-    - adaptation to latest versions of Gaudi, ROOT etc. (*Marco Clemencic*, *Sebastien Ponce*)
 
 
 ---
@@ -412,26 +445,3 @@ title: credits/people
 <div class="grid-item col-span-3 text-center mt-180px mb-auto font-size-1.5rem">
     <strong>Questions?</strong>
 </div>
-
----
-layout: section
-color: blue
-title: Backup
----
-
-# Backup
-
----
-layout: top-title
-color: gray-light
-align: c
-title: CVMFS
----
-
-:: title :: 
-
-# 
-
-:: content ::
-
-
